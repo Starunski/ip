@@ -1,0 +1,88 @@
+.App {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // width: 80em;
+}
+
+.wrapper {
+  // border: 2px solid rgb(219, 30, 30);
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap-reverse;
+  height: 90%;
+  // border: 1px solid red;
+}
+
+.wrapper-block {
+  display: flex;
+  flex: 6;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  // border: 1px solid black;
+}
+
+.search-block {
+  // height: 20em;
+  display: flex;
+
+  // border: 1px solid black;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+
+  .search-input {
+    padding-right: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    .input {
+      width: 100%;
+      margin: 10px;
+    }
+  }
+  .search-button-block {
+    display: flex;
+    // border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.info-block {
+  height: 100%;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.map-block {
+  // border: 1px solid black;
+  width: 30em;
+  height: 60%;
+}
+.data-block {
+  // border: 1px solid black;
+  padding: 10px;
+  height: 30%;
+
+}
+
+input:invalid:not(:placeholder-shown) {
+  border: 2px solid red !important;
+}
+
+// When input is invalid, show and make the adjacanet validation text red
+input:invalid:not(:placeholder-shown) + [data-validation-text] {
+  color: red !important;
+  display: block;
+}
+
+// Hide validation text by default
+[data-validation-text] {
+  display: none;
+}
