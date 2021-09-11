@@ -31,18 +31,20 @@
   display: flex;
 
   // border: 1px solid black;
-  justify-content: center;
+
+  justify-content: flex-end;
+
   align-items: center;
   width: 100%;
 
   .search-input {
     padding-right: 10px;
     display: flex;
-    justify-content: space-between;
-    width: 100%;
+    justify-content: flex-end;
+    width: 80%;
     align-items: center;
     .input {
-      width: 100%;
+      width: 90%;
       margin: 10px;
     }
   }
