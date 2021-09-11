@@ -1,6 +1,4 @@
 node_modules
-.idea/
-build/
-/src/react-app-env.d.ts
-.eslintcache
+# .idea/
+
 
