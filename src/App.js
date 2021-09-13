@@ -91,7 +91,7 @@ const App = () => {
             <div className="data-block">
               {locationStore.allLocations.length !== 0 && (
                 <ul>
-                  <li>city: {locationStore.currentLocation.city}</li>{" "}
+                  <li>City: {locationStore.currentLocation.city}</li>{" "}
                   <li>ip: {locationStore.currentLocation.ip}</li>
                   <li>zip-code: {locationStore.currentLocation.zip}</li>
                   <li>latitude: {locationStore.currentLocation.latitude}</li>
@@ -146,7 +146,7 @@ const App = () => {
             <div className="data-block">
               {locationStore.allLocations.length !== 0 && locationStore.lastSearchLocation  && (
                 <ul>
-                  <li>city: {locationStore.lastSearchLocation.city}</li>
+                  <li>City: {locationStore.lastSearchLocation.city}</li>
                   <li>ip: {locationStore.lastSearchLocation.ip}</li>
                   <li>zip-code: {locationStore.lastSearchLocation.zip}</li>
                   <li>latitude: {locationStore.lastSearchLocation.latitude}</li>
