@@ -32,8 +32,6 @@ const App = () => {
       locationStore.lastSearchLocation.latitude,
     // zoom: 14,
   });
-  console.log("viewport", viewport);
-  console.log("lastViewport", lastViewport);
 
   const [ip, setIp] = useState("");
   const options = {
@@ -44,15 +42,11 @@ const App = () => {
 
   const getBrowserPosition = (pos) => {
     const data = pos.coords;
-    console.log(`data:`, data);
-
-    console.log("Ваше текущее местоположение:");
-    console.log(`Широта: ${data.latitude}`);
-    console.log(`Долгота: ${data.longitude}`);
+    // console.log(`data:`, data);
   };
 
   function error(err) {
-    console.warn(`ERROR(${err.code}): ${err.message}`);
+    // console.warn(`ERROR(${err.code}): ${err.message}`);
   }
 
   const onHandelSearch = () => {
@@ -144,20 +138,23 @@ const App = () => {
               />
             </div>
             <div className="data-block">
-              {locationStore.allLocations.length !== 0 && locationStore.lastSearchLocation  && (
-                <ul>
-                  <li>City: {locationStore.lastSearchLocation.city}</li>
-                  <li>ip: {locationStore.lastSearchLocation.ip}</li>
-                  <li>zip-code: {locationStore.lastSearchLocation.zip}</li>
-                  <li>latitude: {locationStore.lastSearchLocation.latitude}</li>
-                  <li>
-                    longitude: {locationStore.lastSearchLocation.longitude}
-                  </li>
-                  <li>
-                    country: {locationStore.lastSearchLocation.country_name}
-                  </li>
-                </ul>
-              )}
+              {locationStore.allLocations.length !== 0 &&
+                locationStore.lastSearchLocation && (
+                  <ul>
+                    <li>City: {locationStore.lastSearchLocation.city}</li>
+                    <li>ip: {locationStore.lastSearchLocation.ip}</li>
+                    <li>zip-code: {locationStore.lastSearchLocation.zip}</li>
+                    <li>
+                      latitude: {locationStore.lastSearchLocation.latitude}
+                    </li>
+                    <li>
+                      longitude: {locationStore.lastSearchLocation.longitude}
+                    </li>
+                    <li>
+                      country: {locationStore.lastSearchLocation.country_name}
+                    </li>
+                  </ul>
+                )}
             </div>
           </div>
         </div>
